@@ -200,3 +200,26 @@
   cursor:pointer;
 }
 .quiet-link:active{opacity:.7}
+
+
+/* V5.4: runaway No after the 4th tap */
+.no-btn{
+  --no-scale:1;
+  transform:scale(var(--no-scale));
+}
+.no-btn.runaway-no{
+  position:fixed;
+  z-index:999;
+  margin:0;
+  min-width:96px;
+  min-height:46px;
+  transform:scale(var(--no-scale));
+  transition:left .13s ease,top .13s ease,transform .18s ease;
+  box-shadow:0 10px 25px rgba(68,54,59,.13);
+}
+.no-btn.no-stopped{
+  position:static;
+  left:auto;
+  top:auto;
+  transform:scale(var(--no-scale));
+}

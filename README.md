@@ -31,3 +31,11 @@ On the 5th No tap, the question bear becomes a crying bear. Animated tears fall 
 - Pickup is now the main flow.
 - Main action: Set pick-up time.
 - A small low-emphasis “I’d rather meet you there” option remains available.
+
+
+## V5.4 — Runaway No
+- Clicks 1–3: No shrinks normally.
+- Click 4: crying bear starts and No begins moving around the phone screen.
+- Click 5: No shrinks again and continues moving.
+- Click 6: movement stops and the real No ending runs.
+- Movement is bounded to the visible viewport and keeps a usable touch target.

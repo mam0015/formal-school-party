@@ -42,6 +42,9 @@ const msg=document.getElementById('noMessage');
 const questionBear=document.getElementById('questionBear');
 
 let clicks=0;
+let noMoveTimer=null;
+let runawayActive=false;
+
 const msgs=[
   'I wanted to ask you properly ♡',
   'Are you sureee? 🥺',
@@ -51,27 +54,80 @@ const msgs=[
   'At this point, even the bear is rooting for a yes 😭🧸💗'
 ];
 
+function moveNoAround(){
+  if(!no || !runawayActive) return;
+
+  const rect=no.getBoundingClientRect();
+  const margin=18;
+  const maxLeft=Math.max(margin,window.innerWidth-rect.width-margin);
+  const maxTop=Math.max(90,window.innerHeight-rect.height-90);
+
+  const left=margin+Math.random()*Math.max(1,maxLeft-margin);
+  const top=90+Math.random()*Math.max(1,maxTop-90);
+
+  no.style.left=`${left}px`;
+  no.style.top=`${top}px`;
+}
+
+function startRunawayNo(){
+  if(!no || runawayActive) return;
+  runawayActive=true;
+  no.classList.add('runaway-no');
+  moveNoAround();
+
+  // Fast enough to feel playful, slow enough that it is still genuinely tappable.
+  noMoveTimer=setInterval(moveNoAround,650);
+}
+
+function stopRunawayNo(){
+  runawayActive=false;
+  if(noMoveTimer){
+    clearInterval(noMoveTimer);
+    noMoveTimer=null;
+  }
+  if(no){
+    no.classList.remove('runaway-no');
+    no.classList.add('no-stopped');
+    no.style.left='';
+    no.style.top='';
+  }
+}
+
 if(no&&yes){
   no.addEventListener('click',async()=>{
     clicks++;
 
-    // Clicks 1–5 are playful
-    if(clicks<=5){
-      no.style.transform=`scale(${Math.max(.62,1-clicks*.075)})`;
-      yes.style.transform=`scale(${1+Math.min(clicks*.055,.30)})`;
-
-      if(msg){
-        msg.textContent=msgs[Math.min(clicks,msgs.length-1)];
-      }
-
-      // On the 5th No tap, turn the bear into the crying bear
-      if(questionBear&&clicks>=5){
-        questionBear.classList.add('crying');
-      }
+    // Taps 1–3: normal playful shrinking.
+    if(clicks<=3){
+      no.style.setProperty('--no-scale',String(Math.max(.82,1-clicks*.06)));
+      yes.style.transform=`scale(${1+clicks*.055})`;
+      if(msg) msg.textContent=msgs[clicks];
       return;
     }
 
-    // Click 6+ is treated as the final real No
+    // 4th tap: crying bear + moving No begins.
+    if(clicks===4){
+      if(questionBear) questionBear.classList.add('crying');
+      no.style.setProperty('--no-scale','.76');
+      yes.style.transform='scale(1.22)';
+      if(msg) msg.textContent=msgs[4];
+      startRunawayNo();
+      return;
+    }
+
+    // 5th tap: smaller again and keep running around.
+    if(clicks===5){
+      if(questionBear) questionBear.classList.add('crying');
+      no.style.setProperty('--no-scale','.68');
+      yes.style.transform='scale(1.28)';
+      if(msg) msg.textContent=msgs[5];
+      moveNoAround();
+      return;
+    }
+
+    // 6th tap: No stops moving and becomes the real answer.
+    stopRunawayNo();
+    no.style.setProperty('--no-scale','.68');
     state.answer='NO';
     showScreen('noFinalScreen');
 
@@ -93,7 +149,17 @@ if(no&&yes){
     }
   });
 
+  // Extra evasive movement while in runaway mode.
+  no.addEventListener('pointerenter',()=>{
+    if(runawayActive) moveNoAround();
+  });
+
+  no.addEventListener('touchstart',()=>{
+    if(runawayActive && Math.random()<0.35) moveNoAround();
+  },{passive:true});
+
   yes.addEventListener('click',()=>{
+    stopRunawayNo();
     state.answer='YES';
     sendEmail({
       event:'FORMAL_INVITE_ACCEPTED',
