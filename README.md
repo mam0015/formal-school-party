@@ -12,3 +12,7 @@ Upload `index.html`, `style.css`, `script.js`, and `config.js` to the repository
 
 ## Test before sending
 Test the Yes email and both transport branches on an actual Android phone.
+
+
+## V5.1 update
+On the 5th No tap, the question bear becomes a crying bear. Animated tears fall and form a heart-shaped puddle beneath it.

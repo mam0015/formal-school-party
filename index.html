@@ -1,6 +1,31 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fff5f8"><title>I made you something :)</title><link rel="stylesheet" href="style.css"></head><body><div class="ambient" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span></div><main class="app-shell">
 <section class="screen active" id="introScreen"><div class="content"><div class="bear-art" aria-hidden="true"><span class="floating-heart fh1">♥</span><span class="floating-heart fh2">♥</span><span class="floating-heart fh3">♥</span><div class="bear"><div class="ear left"></div><div class="ear right"></div><div class="face"><i class="eye left-eye"></i><i class="eye right-eye"></i><i class="blush left-blush"></i><i class="blush right-blush"></i><i class="mouth"></i></div><div class="body"></div><div class="flower">🌷</div></div></div><p class="eyebrow">okay, so...</p><h1>I made you something.</h1><p class="lead">Okay, I was way too nervous to ask you this in person. So I made this instead. Hopefully, you find it kinda cute and not completely ridiculous.</p><p class="soft-copy">I also worked on this app for way too long, so I really hope you like it 😭</p><button class="primary-btn" data-next="questionScreen" type="button">Next <span>→</span></button></div></section>
-<section class="screen" id="questionScreen"><div class="content"><div class="mini-bear">🧸💗</div><p class="eyebrow">the actual question...</p><h1>Will you come to Formal with me? 💕</h1><p class="lead">I thought it would be really nice to go together :)</p><div class="choice-zone"><button class="answer yes-btn" id="yesBtn" type="button">Yes 💗</button><button class="answer no-btn" id="noBtn" type="button">No 🙈</button></div><p class="micro-copy" id="noMessage" aria-live="polite">I wanted to ask you properly ♡</p></div></section>
+<section class="screen" id="questionScreen"><div class="content"><div class="question-bear-wrap" id="questionBear" aria-hidden="true">
+  <div class="question-bear">
+    <div class="qb-ear qb-left"></div>
+    <div class="qb-ear qb-right"></div>
+    <div class="qb-face">
+      <i class="qb-eye qb-eye-left"></i>
+      <i class="qb-eye qb-eye-right"></i>
+      <i class="qb-blush qb-blush-left"></i>
+      <i class="qb-blush qb-blush-right"></i>
+      <i class="qb-mouth"></i>
+      <i class="tear tear-left"></i>
+      <i class="tear tear-right"></i>
+    </div>
+    <div class="qb-body"></div>
+    <div class="qb-heart">💗</div>
+  </div>
+  <div class="tear-heart-pool" aria-hidden="true">
+    <span class="pool-heart p1">💧</span>
+    <span class="pool-heart p2">💧</span>
+    <span class="pool-heart p3">💧</span>
+    <span class="pool-heart p4">💧</span>
+    <span class="pool-heart p5">💧</span>
+    <span class="pool-heart p6">💧</span>
+    <span class="heart-outline">♡</span>
+  </div>
+</div><p class="eyebrow">the actual question...</p><h1>Will you come to Formal with me? 💕</h1><p class="lead">I thought it would be really nice to go together :)</p><div class="choice-zone"><button class="answer yes-btn" id="yesBtn" type="button">Yes 💗</button><button class="answer no-btn" id="noBtn" type="button">No 🙈</button></div><p class="micro-copy" id="noMessage" aria-live="polite">I wanted to ask you properly ♡</p></div></section>
 <section class="screen" id="yesScreen"><div class="content"><div class="reaction-sticker">😂💗</div><p class="eyebrow">wait...</p><h1>Wait... actually?</h1><p class="big-line">You just made my day.</p><div class="message-card"><p>Also, no pressure to stay with me the whole night. We can hang out with our friends too.</p><p>I just thought it would be really nice to go there together.</p></div><button class="primary-btn" data-next="transportScreen" type="button">Next <span>→</span></button></div></section>
 <section class="screen" id="transportScreen"><div class="content"><div class="emoji-top">🚗💗</div><p class="eyebrow">one more thing</p><h1>And if you'd like, I can pick you up.</h1><p class="lead">What works best for you?</p><div class="stacked-options"><button class="option-card" id="pickupOption" type="button"><span class="option-icon">🕒</span><span><strong>Pick-up time</strong><small>I’ll come and pick you up</small></span><span class="arrow">→</span></button><button class="option-card" id="ownWayOption" type="button"><span class="option-icon">✨</span><span><strong>I'll make my own way there</strong><small>No worries at all</small></span><span class="arrow">→</span></button></div></div></section>
 <section class="screen" id="timeScreen"><div class="content"><div class="emoji-top">🕒💕</div><p class="eyebrow">perfect</p><h1>What time works for you?</h1><p class="lead">Approximate is completely fine.</p><label class="field-label" for="pickupTime">Pick-up time</label><div class="field-wrap time-field"><input id="pickupTime" type="time"></div><button class="primary-btn full" id="timeNextBtn" type="button">Next <span>→</span></button><p class="validation" id="timeValidation" aria-live="polite"></p></div></section>
