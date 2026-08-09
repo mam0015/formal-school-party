@@ -16,3 +16,11 @@ Test the Yes email and both transport branches on an actual Android phone.
 
 ## V5.1 update
 On the 5th No tap, the question bear becomes a crying bear. Animated tears fall and form a heart-shaped puddle beneath it.
+
+
+## V5.2 — Final No flow
+- No taps 1–5 stay playful.
+- On tap 5, the bear becomes the crying bear and the heart-shaped tear puddle appears.
+- On tap 6 or later, No becomes the final answer.
+- The app opens a respectful ending screen saying that a lot of time went into the app, but there is no pressure and everyone can still enjoy Formal with friends.
+- If Formspree is connected, a NO response is emailed as well.

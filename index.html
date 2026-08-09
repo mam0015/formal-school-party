@@ -32,4 +32,29 @@
 <section class="screen" id="addressScreen"><div class="content"><div class="emoji-top">📍💗</div><p class="eyebrow">last question, promise</p><h1>Where should I pick you up from?</h1><p class="lead">Just put the address or place that works best for you.</p><label class="field-label" for="pickupAddress">Pick-up address</label><div class="field-wrap"><input id="pickupAddress" type="text" autocomplete="street-address" placeholder="e.g. home address or a nearby place"></div><button class="primary-btn full" id="addressSubmitBtn" type="button">Send it 💌</button><p class="validation" id="addressValidation" aria-live="polite"></p></div></section>
 <section class="screen" id="pickupCompleteScreen"><div class="content"><div class="finish-emoji">🥹💞</div><h1>Perfect.</h1><p class="big-line">I’ve got it :)</p><div class="summary-card"><div><span>Pick-up time</span><strong id="summaryTime">—</strong></div><div><span>Pick-up from</span><strong id="summaryAddress">—</strong></div></div><p class="lead">I hope you liked this little app. I definitely spent way too much time making it 😭</p><p class="soft-copy">Really looking forward to Formal now 💗</p><p class="send-status" id="pickupSendStatus" aria-live="polite"></p></div></section>
 <section class="screen" id="ownWayCompleteScreen"><div class="content"><div class="finish-emoji">💗✨</div><h1>No pressure, that's all good.</h1><p class="lead">We can just meet there and enjoy the night with everyone.</p><div class="message-card"><p>I hope you liked this little thing I made.</p><p>I put way too much time into this app because apparently asking one question normally was too easy 😭</p></div><p class="soft-copy">I’m really glad you said yes 💕</p><p class="send-status" id="ownWaySendStatus" aria-live="polite"></p></div></section>
-</main><script src="config.js"></script><script src="script.js"></script></body></html>
+
+    <!-- FINAL NO -->
+    <section class="screen" id="noFinalScreen" data-screen="no-final">
+      <div class="content">
+        <div class="finish-emoji" aria-hidden="true">🧸🤍</div>
+        <p class="eyebrow">okay, fair enough</p>
+        <h1>That’s completely okay.</h1>
+
+        <div class="message-card">
+          <p>
+            I put a lot of time into making this app because I was really hoping you might say yes.
+          </p>
+          <p>
+            But honestly, that’s completely okay. We can still have a good night at Formal, hang out with our friends, and just enjoy the night there.
+          </p>
+        </div>
+
+        <p class="soft-copy">
+          I hope you at least thought the app was kinda cute 😭🧸
+        </p>
+
+        <p class="send-status" id="noSendStatus" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main><script src="config.js"></script><script src="script.js"></script></body></html>
