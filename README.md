@@ -24,3 +24,10 @@ On the 5th No tap, the question bear becomes a crying bear. Animated tears fall 
 - On tap 6 or later, No becomes the final answer.
 - The app opens a respectful ending screen saying that a lot of time went into the app, but there is no pressure and everyone can still enjoy Formal with friends.
 - If Formspree is connected, a NO response is emailed as well.
+
+
+## V5.3 — Pickup-first
+- The large transport choice was removed.
+- Pickup is now the main flow.
+- Main action: Set pick-up time.
+- A small low-emphasis “I’d rather meet you there” option remains available.

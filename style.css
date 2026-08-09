@@ -185,3 +185,18 @@
   0%,100%{transform:translateX(-50%) scale(.96)}
   50%{transform:translateX(-50%) scale(1.04)}
 }
+
+.quiet-link{
+  display:block;
+  margin:14px auto 0;
+  padding:8px 10px;
+  border:0;
+  background:transparent;
+  color:#a78b95;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  cursor:pointer;
+}
+.quiet-link:active{opacity:.7}
