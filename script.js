@@ -75,8 +75,8 @@ function startRunawayNo(){
   no.classList.add('runaway-no');
   moveNoAround();
 
-  // Fast enough to feel playful, slow enough that it is still genuinely tappable.
-  noMoveTimer=setInterval(moveNoAround,650);
+  // Fast playful movement after the 4th No tap.
+  noMoveTimer=setInterval(moveNoAround,450);
 }
 
 function stopRunawayNo(){

@@ -39,3 +39,15 @@ On the 5th No tap, the question bear becomes a crying bear. Animated tears fall 
 - Click 5: No shrinks again and continues moving.
 - Click 6: movement stops and the real No ending runs.
 - Movement is bounded to the visible viewport and keeps a usable touch target.
+
+
+## V5.5 — Faster No + clearer Yes text
+- After the 4th No tap, the moving No button now changes position every 300 ms.
+- The Yes-page copy now clearly says the idea is to go to Formal together, while both people can hang out with their own friends once there.
+
+
+## V5.6 update
+- Runaway No now moves every 450 ms after the 4th No tap.
+- Yes-page text was simplified to make it clear you only mean going to Formal together, then hanging out with friends once there.
+- Pickup page now says: “I’d really like to pick you up, if that’s okay with you. What time works for you?”
+- Final No page is now shorter and gentler: “Okay, fair enough. I hope you at least thought the app was kinda cute. See you at Formal :)”
