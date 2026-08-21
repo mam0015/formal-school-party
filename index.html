@@ -26,13 +26,7 @@
     <span class="heart-outline">♡</span>
   </div>
 </div><p class="eyebrow">the actual question...</p><h1>Will you come to Formal with me? 💕</h1><p class="lead">I thought it would be really nice to go together :)</p><div class="choice-zone"><button class="answer yes-btn" id="yesBtn" type="button">Yes 💗</button><button class="answer no-btn" id="noBtn" type="button">No 🙈</button></div><p class="micro-copy" id="noMessage" aria-live="polite">I wanted to ask you properly ♡</p></div></section>
-<section class="screen" id="yesScreen"><div class="content"><div class="reaction-sticker">😂💗</div><p class="eyebrow">wait...</p><h1>Wait... actually?</h1><p class="big-line">You just made my day.</p><div class="message-card"><p>I just thought it would be really nice to go there together.</p><p>Once we’re there, we can hang out with our friends and just enjoy the night :)</p></div><button class="primary-btn" data-next="transportScreen" type="button">Next <span>→</span></button></div></section>
-<section class="screen" id="transportScreen"><div class="content"><div class="emoji-top">🚗💗</div><p class="eyebrow">one more thing</p><h1>I’d really like to pick you up, if that’s okay with you.</h1><p class="lead">What time works for you?</p><button class="primary-btn full" id="pickupOption" type="button">Set pick-up time <span>→</span></button><button class="quiet-link" id="ownWayOption" type="button">I’d rather meet you there</button></div></section>
-<section class="screen" id="timeScreen"><div class="content"><div class="emoji-top">🕒💕</div><p class="eyebrow">perfect</p><h1>What time works for you?</h1><p class="lead">Approximate is completely fine.</p><label class="field-label" for="pickupTime">Pick-up time</label><div class="field-wrap time-field"><input id="pickupTime" type="time"></div><button class="primary-btn full" id="timeNextBtn" type="button">Next <span>→</span></button><p class="validation" id="timeValidation" aria-live="polite"></p></div></section>
-<section class="screen" id="addressScreen"><div class="content"><div class="emoji-top">📍💗</div><p class="eyebrow">last question, promise</p><h1>Where should I pick you up from?</h1><p class="lead">Just put the address or place that works best for you.</p><label class="field-label" for="pickupAddress">Pick-up address</label><div class="field-wrap"><input id="pickupAddress" type="text" autocomplete="street-address" placeholder="e.g. home address or a nearby place"></div><button class="primary-btn full" id="addressSubmitBtn" type="button">Send it 💌</button><p class="validation" id="addressValidation" aria-live="polite"></p></div></section>
-<section class="screen" id="pickupCompleteScreen"><div class="content"><div class="finish-emoji">🥹💞</div><h1>Perfect.</h1><p class="big-line">I’ve got it :)</p><div class="summary-card"><div><span>Pick-up time</span><strong id="summaryTime">—</strong></div><div><span>Pick-up from</span><strong id="summaryAddress">—</strong></div></div><p class="lead">I hope you liked this little app. I definitely spent way too much time making it 😭</p><p class="soft-copy">Really looking forward to Formal now 💗</p><p class="send-status" id="pickupSendStatus" aria-live="polite"></p></div></section>
-<section class="screen" id="ownWayCompleteScreen"><div class="content"><div class="finish-emoji">💗✨</div><h1>No pressure, that's all good.</h1><p class="lead">We can just meet there and enjoy the night with everyone.</p><div class="message-card"><p>I hope you liked this little thing I made.</p><p>I put way too much time into this app because apparently asking one question normally was too easy 😭</p></div><p class="soft-copy">I’m really glad you said yes 💕</p><p class="send-status" id="ownWaySendStatus" aria-live="polite"></p></div></section>
-
+<section class="screen" id="yesScreen"><div class="content"><div class="reaction-sticker">😂💗</div><p class="eyebrow">wait...</p><h1>Wait... actually?</h1><p class="big-line">You just made my day.</p><div class="message-card"><p>I just thought it would be really nice to go there together.</p><p>Once we’re there, we can hang out with our friends and just enjoy the night :)</p></div><p class="lead">I’ll message you a few days before Formal so we can figure out what time to go.</p><p class="soft-copy">Seriously though, I’m really glad you said yes 💕</p><p class="send-status" id="yesSendStatus" aria-live="polite"></p></div></section>
     <!-- FINAL NO -->
     <section class="screen" id="noFinalScreen" data-screen="no-final">
       <div class="content">
@@ -40,9 +34,14 @@
         <p class="eyebrow">okay, fair enough</p>
         <h1>Okay, fair enough.</h1>
 
-        <p class="lead">I hope you at least thought the app was kinda cute.</p>
-        <p class="soft-copy">See you at Formal :)</p>
+        <div class="message-card">
+          <p>I hope you at least thought the app was kinda cute. I really didn’t mean to make you uncomfortable or make anything weird.</p>
+          <p>I just thought it could be nice to get to know each other a bit better and maybe go to Formal together.</p>
+          <p>I knew there was a pretty good chance you might say no, but I thought I’d shoot my shot anyway 😭</p>
+          <p>We don’t talk heaps because I get pretty shy and overthink my English, especially when I’m worried I’ll say something dumb.</p>
+        </div>
 
+        <p class="lead">Anyway, I hope you liked the app a little. Have a good day :)</p>
         <p class="send-status" id="noSendStatus" aria-live="polite"></p>
       </div>
     </section>
